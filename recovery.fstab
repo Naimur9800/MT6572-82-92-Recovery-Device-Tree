@@ -1,0 +1,25 @@
+# ANDROID FSTAB FILE
+# DEVICE PARTITION AND STORAGE ALLOCATION
+# SPECIFIED PARTITION FOR MTK/6572-82-92
+
+<mnt_pt>            <fs>                  <src>                  <flags>
+
+/boot		    emmc		/dev/bootimg             flags=display="Boot";backup=1
+/logo		    emmc	        /dev/logo		 flags=display="Logo";backup=1
+/misc		    emmc		/dev/misc                flags=display="Misc";backup=0
+/nvram		    emmc		/dev/nvram               flags=display="Nvram";backup=1
+/pro_info           emmc                /dev/pro_info            flags=display="Pro_info";backup=1
+/protect_f          emmc                /dev/protect_f           flags=display="Protect_f";backup=1
+/protect_s          emmc                /dev/protect_s           flags=display="Protect_s";backup=1
+/recovery	    emmc		/dev/recovery            flags=display="Recovery";backup=1
+/system		    ext4		/dev/block/mmcblk0p9     flags=display="System";backup=1;wipeingui
+/cache		    ext4		/dev/block/mmcblk0p10     flags=display="Cache";backup=1;wipeingui;wipeduringfactoryreset
+/data		    ext4		/dev/block/mmcblk0p11    flags=display="Data";backup=1;wipeingui;wipeduringfactoryreset;length=-16384
+/sdcard1	    vfat		/dev/block/mmcblk0p9     flags=display="Phone Storage";storage;wipeingui;backup=0
+/sdcard0	    auto	        /dev/block/mmcblk1p1	 flags=display="Micro SDCard";storage;wipeingui;removable;backup=0
+
+
+
+# Config_TWRP_FSTAB_Compiled_by
+
+## Md. Naimur Rahman (Naimur9800)
